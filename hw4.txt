@@ -1,0 +1,534 @@
+Задание 1
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ echo new file > file1.txt
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ ls
+file1.txt  hw4.txt
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ ls /etc 1>etc_ls.txt 2>etc_ls_errors.txt
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ ls
+etc_ls_errors.txt  etc_ls.txt  file1.txt  hw4.txt
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ cat etc_ls.txt
+acpi
+adduser.conf
+alsa
+alternatives
+anacrontab
+apg.conf
+apm
+apparmor
+apparmor.d
+apport
+appstream.conf
+apt
+avahi
+bash.bashrc
+bash_completion
+bash_completion.d
+bindresvport.blacklist
+binfmt.d
+bluetooth
+brlapi.key
+brltty
+brltty.conf
+ca-certificates
+ca-certificates.conf
+ca-certificates.conf.dpkg-old
+calendar
+chatscripts
+console-setup
+cracklib
+cron.d
+cron.daily
+cron.hourly
+cron.monthly
+crontab
+cron.weekly
+cups
+cupshelpers
+dbus-1
+dconf
+debconf.conf
+debian_version
+default
+deluser.conf
+depmod.d
+dhcp
+dictionaries-common
+dpkg
+e2scrub.conf
+emacs
+environment
+environment.d
+ethertypes
+firefox
+fonts
+fprintd.conf
+fstab
+fuse.conf
+fwupd
+gai.conf
+gamemode.ini
+gdb
+gdm3
+geoclue
+ghostscript
+glvnd
+gnome
+groff
+group
+group-
+grub.d
+gshadow
+gshadow-
+gss
+gtk-2.0
+gtk-3.0
+hdparm.conf
+host.conf
+hostid
+hostname
+hosts
+hosts.allow
+hosts.deny
+hp
+ifplugd
+init
+init.d
+initramfs-tools
+inputrc
+insserv.conf.d
+iproute2
+issue
+issue.net
+kernel
+kernel-img.conf
+kerneloops.conf
+ldap
+ld.so.cache
+ld.so.conf
+ld.so.conf.d
+legal
+libao.conf
+libaudit.conf
+libblockdev
+libnl-3
+libpaper.d
+libreoffice
+locale.alias
+locale.gen
+localtime
+logcheck
+login.defs
+logrotate.conf
+logrotate.d
+lsb-release
+ltrace.conf
+machine-id
+magic
+magic.mime
+mailcap
+mailcap.order
+manpath.config
+mc
+mime.types
+mke2fs.conf
+modprobe.d
+modules
+modules-load.d
+mtab
+mtools.conf
+mysql
+nanorc
+netplan
+network
+networkd-dispatcher
+NetworkManager
+networks
+newt
+nsswitch.conf
+openvpn
+opt
+os-release
+PackageKit
+pam.conf
+pam.d
+papersize
+passwd
+passwd-
+pcmcia
+perl
+pki
+pm
+pnm2ppa.conf
+polkit-1
+popularity-contest.conf
+ppp
+printcap
+profile
+profile.d
+protocols
+pulse
+python3
+python3.8
+rc0.d
+rc1.d
+rc2.d
+rc3.d
+rc4.d
+rc5.d
+rc6.d
+rcS.d
+resolv.conf
+rmt
+rpc
+rsyslog.conf
+rsyslog.d
+rygel.conf
+sane.d
+security
+selinux
+sensors3.conf
+sensors.d
+services
+sgml
+shadow
+shadow-
+shells
+skel
+snmp
+speech-dispatcher
+ssh
+ssl
+subgid
+subgid-
+subuid
+subuid-
+sudoers
+sudoers.d
+sysctl.conf
+sysctl.d
+systemd
+terminfo
+thermald
+thunderbird
+timezone
+tmpfiles.d
+ubuntu-advantage
+ucf.conf
+udev
+udisks2
+ufw
+update-manager
+update-motd.d
+update-notifier
+UPower
+usb_modeswitch.conf
+usb_modeswitch.d
+vconsole.conf
+vim
+vtrgb
+vulkan
+wgetrc
+wpa_supplicant
+X11
+xattr.conf
+xdg
+xml
+zsh_command_not_found
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ cat etc_ls_errors.txt
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ ls /etc1 2>new_errors.txt
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ cat new_errors.txt 
+ls: невозможно получить доступ к '/etc1': Нет такого файла или каталога
+
+
+
+
+
+
+
+Задание 2
+
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ ls /etc -al
+итого 1128
+drwxr-xr-x 130 root root   12288 мая 17 13:21 .
+drwxr-xr-x  20 root root    4096 мар 12 17:23 ..
+drwxr-xr-x   3 root root    4096 апр 23  2020 acpi
+-rw-r--r--   1 root root    3028 апр 23  2020 adduser.conf
+drwxr-xr-x   3 root root    4096 апр 23  2020 alsa
+drwxr-xr-x   2 root root    4096 мая 11 20:19 alternatives
+-rw-r--r--   1 root root     401 июл 17  2019 anacrontab
+-rw-r--r--   1 root root     433 окт  2  2017 apg.conf
+drwxr-xr-x   5 root root    4096 апр 23  2020 apm
+drwxr-xr-x   3 root root    4096 апр 23  2020 apparmor
+drwxr-xr-x   7 root root    4096 мая 14 21:13 apparmor.d
+drwxr-xr-x   4 root root    4096 мая 14 20:23 apport
+-rw-r--r--   1 root root     769 янв 18  2020 appstream.conf
+drwxr-xr-x   7 root root    4096 мар 12 17:27 apt
+drwxr-xr-x   3 root root    4096 апр 23  2020 avahi
+-rw-r--r--   1 root root    2319 фев 25  2020 bash.bashrc
+-rw-r--r--   1 root root      45 янв 26  2020 bash_completion
+drwxr-xr-x   2 root root    4096 мая 14 20:23 bash_completion.d
+-rw-r--r--   1 root root     367 апр 15  2020 bindresvport.blacklist
+drwxr-xr-x   2 root root    4096 апр 22  2020 binfmt.d
+drwxr-xr-x   2 root root    4096 апр 23  2020 bluetooth
+-rw-r-----   1 root root      33 апр 23  2020 brlapi.key
+drwxr-xr-x   7 root root    4096 апр 23  2020 brltty
+-rw-r--r--   1 root root   26916 мар  4  2020 brltty.conf
+drwxr-xr-x   3 root root    4096 апр 23  2020 ca-certificates
+-rw-r--r--   1 root root    6569 мая 17 12:57 ca-certificates.conf
+-rw-r--r--   1 root root    5713 апр 23  2020 ca-certificates.conf.dpkg-old
+drwxr-xr-x   2 root root    4096 апр 23  2020 calendar
+drwxr-s---   2 root dip     4096 мая 14 21:29 chatscripts
+drwxr-xr-x   2 root root    4096 мая  7 12:00 console-setup
+drwxr-xr-x   2 root root    4096 апр 23  2020 cracklib
+drwxr-xr-x   2 root root    4096 мар 12 17:26 cron.d
+drwxr-xr-x   2 root root    4096 мая 14 20:29 cron.daily
+drwxr-xr-x   2 root root    4096 апр 23  2020 cron.hourly
+drwxr-xr-x   2 root root    4096 апр 23  2020 cron.monthly
+-rw-r--r--   1 root root    1042 фев 14  2020 crontab
+drwxr-xr-x   2 root root    4096 апр 23  2020 cron.weekly
+drwxr-xr-x   5 root lp      4096 мая 17 12:51 cups
+drwxr-xr-x   2 root root    4096 апр 23  2020 cupshelpers
+drwxr-xr-x   4 root root    4096 апр 23  2020 dbus-1
+drwxr-xr-x   4 root root    4096 апр 23  2020 dconf
+-rw-r--r--   1 root root    2969 авг  3  2019 debconf.conf
+-rw-r--r--   1 root root      13 дек  5  2019 debian_version
+drwxr-xr-x   3 root root    4096 мая 17 13:15 default
+-rw-r--r--   1 root root     604 сен 16  2018 deluser.conf
+drwxr-xr-x   2 root root    4096 апр 23  2020 depmod.d
+drwxr-xr-x   4 root root    4096 апр 23  2020 dhcp
+drwxr-xr-x   2 root root    4096 мар 12 17:26 dictionaries-common
+drwxr-xr-x   4 root root    4096 апр 23  2020 dpkg
+-rw-r--r--   1 root root     685 фев 14  2020 e2scrub.conf
+drwxr-xr-x   3 root root    4096 апр 23  2020 emacs
+-rw-r--r--   1 root root      96 апр 23  2020 environment
+drwxr-xr-x   2 root root    4096 апр 23  2020 environment.d
+-rw-r--r--   1 root root    1816 дек 27  2019 ethertypes
+drwxr-xr-x   3 root root    4096 мая 14 21:13 firefox
+drwxr-xr-x   4 root root    4096 апр 23  2020 fonts
+-rw-r--r--   1 root root      20 фев 10  2020 fprintd.conf
+-rw-rw-r--   1 root root     665 мар 12 17:19 fstab
+-rw-r--r--   1 root root     280 июн 20  2014 fuse.conf
+drwxr-xr-x   3 root root    4096 мая 17 12:58 fwupd
+-rw-r--r--   1 root root    2584 фев  1  2020 gai.conf
+-rw-r--r--   1 root root    4371 мар  3  2020 gamemode.ini
+drwxr-xr-x   2 root root    4096 апр 23  2020 gdb
+drwxr-xr-x   8 root root    4096 мая 14 20:25 gdm3
+drwxr-xr-x   2 root root    4096 апр 23  2020 geoclue
+drwxr-xr-x   4 root root    4096 апр 23  2020 ghostscript
+drwxr-xr-x   3 root root    4096 апр 23  2020 glvnd
+drwxr-xr-x   2 root root    4096 апр 23  2020 gnome
+drwxr-xr-x   2 root root    4096 апр 23  2020 groff
+-rw-r--r--   1 root root    1211 мая 14 20:30 group
+-rw-r--r--   1 root root    1221 мая 14 20:22 group-
+drwxr-xr-x   2 root root    4096 мая 14 20:24 grub.d
+-rw-r-----   1 root shadow   993 мая 14 20:30 gshadow
+-rw-r-----   1 root shadow  1003 мая 14 20:22 gshadow-
+drwxr-xr-x   3 root root    4096 апр 23  2020 gss
+drwxr-xr-x   2 root root    4096 апр 23  2020 gtk-2.0
+drwxr-xr-x   2 root root    4096 апр 23  2020 gtk-3.0
+-rw-r--r--   1 root root    5060 авг 21  2019 hdparm.conf
+-rw-r--r--   1 root root      92 дек  5  2019 host.conf
+-rw-r--r--   1 root root       4 апр 23  2020 hostid
+-rw-r--r--   1 root root      19 мар 12 17:23 hostname
+-rw-r--r--   1 root root     233 мар 12 17:23 hosts
+-rw-r--r--   1 root root     411 апр 23  2020 hosts.allow
+-rw-r--r--   1 root root     711 апр 23  2020 hosts.deny
+drwxr-xr-x   2 root root    4096 апр 23  2020 hp
+drwxr-xr-x   3 root root    4096 апр 23  2020 ifplugd
+drwxr-xr-x   2 root root    4096 мая 14 20:50 init
+drwxr-xr-x   2 root root    4096 мая 17 13:15 init.d
+drwxr-xr-x   5 root root    4096 апр 23  2020 initramfs-tools
+-rw-r--r--   1 root root    1748 фев 25  2020 inputrc
+drwxr-xr-x   2 root root    4096 мая 14 20:25 insserv.conf.d
+drwxr-xr-x   4 root root    4096 апр 23  2020 iproute2
+-rw-r--r--   1 root root      24 апр 15  2020 issue
+-rw-r--r--   1 root root      17 апр 15  2020 issue.net
+drwxr-xr-x   6 root root    4096 апр 23  2020 kernel
+-rw-r--r--   1 root root     110 мар 12 17:24 kernel-img.conf
+-rw-r--r--   1 root root    1308 дек  2  2017 kerneloops.conf
+drwxr-xr-x   2 root root    4096 мая 17 13:07 ldap
+-rw-r--r--   1 root root   64057 мая 17 13:21 ld.so.cache
+-rw-r--r--   1 root root      34 апр 15  2020 ld.so.conf
+drwxr-xr-x   2 root root    4096 апр 23  2020 ld.so.conf.d
+-rw-r--r--   1 root root     267 дек  5  2019 legal
+-rw-r--r--   1 root root      27 янв 19  2018 libao.conf
+-rw-r--r--   1 root root     191 фев 18  2020 libaudit.conf
+drwxr-xr-x   3 root root    4096 апр 23  2020 libblockdev
+drwxr-xr-x   2 root root    4096 апр 23  2020 libnl-3
+drwxr-xr-x   2 root root    4096 июн 26  2019 libpaper.d
+drwxr-xr-x   2 root root    4096 апр 23  2020 libreoffice
+-rw-r--r--   1 root root    2996 апр 15  2020 locale.alias
+-rw-r--r--   1 root root    9438 мар 12 17:23 locale.gen
+lrwxrwxrwx   1 root root      38 мая 14 20:35 localtime -> /usr/share/zoneinfo/Asia/Yekaterinburg
+drwxr-xr-x   4 root root    4096 апр 23  2020 logcheck
+-rw-r--r--   1 root root   10550 фев  7  2020 login.defs
+-rw-r--r--   1 root root     533 янв 21  2019 logrotate.conf
+drwxr-xr-x   2 root root    4096 мая 14 21:29 logrotate.d
+-rw-r--r--   1 root root     102 апр 15  2020 lsb-release
+-rw-r--r--   1 root root   14867 фев  1  2019 ltrace.conf
+-r--r--r--   1 root root      33 мар 12 17:30 machine-id
+-rw-r--r--   1 root root     111 янв 17  2020 magic
+-rw-r--r--   1 root root     111 янв 17  2020 magic.mime
+-rw-r--r--   1 root root   42102 мая 17 13:19 mailcap
+-rw-r--r--   1 root root     449 окт 19  2019 mailcap.order
+-rw-r--r--   1 root root    5215 фев 25  2020 manpath.config
+drwxr-xr-x   2 root root    4096 мая 11 13:43 mc
+-rw-r--r--   1 root root   24546 окт 19  2019 mime.types
+-rw-r--r--   1 root root     808 фев 14  2020 mke2fs.conf
+drwxr-xr-x   2 root root    4096 мая 14 21:23 modprobe.d
+-rw-r--r--   1 root root     195 апр 23  2020 modules
+drwxr-xr-x   2 root root    4096 апр 23  2020 modules-load.d
+lrwxrwxrwx   1 root root      19 мар 12 17:23 mtab -> ../proc/self/mounts
+-rw-r--r--   1 root root     624 мар 22  2020 mtools.conf
+drwxr-xr-x   3 root root    4096 апр 23  2020 mysql
+-rw-r--r--   1 root root   10037 фев  7  2020 nanorc
+drwxr-xr-x   2 root root    4096 апр 23  2020 netplan
+drwxr-xr-x   6 root root    4096 апр 23  2020 network
+drwxr-xr-x   8 root root    4096 апр 23  2020 networkd-dispatcher
+drwxr-xr-x   7 root root    4096 апр 23  2020 NetworkManager
+-rw-r--r--   1 root root      91 дек  5  2019 networks
+drwxr-xr-x   2 root root    4096 апр 23  2020 newt
+-rw-r--r--   1 root root     542 апр 23  2020 nsswitch.conf
+drwxr-xr-x   4 root root    4096 мая 17 13:15 openvpn
+drwxr-xr-x   2 root root    4096 апр 23  2020 opt
+lrwxrwxrwx   1 root root      21 мар 12 17:20 os-release -> ../usr/lib/os-release
+drwxr-xr-x   2 root root    4096 мая 14 20:47 PackageKit
+-rw-r--r--   1 root root     552 дек 17  2019 pam.conf
+drwxr-xr-x   2 root root    4096 мая 14 21:29 pam.d
+-rw-rw-r--   1 root root       3 мар 12 17:23 papersize
+-rw-r--r--   1 root root    3258 мая 14 20:41 passwd
+-rw-r--r--   1 root root    3199 мая 14 20:38 passwd-
+drwxr-xr-x   2 root root    4096 апр 23  2020 pcmcia
+drwxr-xr-x   3 root root    4096 апр 23  2020 perl
+drwxr-xr-x   4 root root    4096 апр 23  2020 pki
+drwxr-xr-x   3 root root    4096 апр 23  2020 pm
+-rw-r--r--   1 root root    7649 апр 23  2020 pnm2ppa.conf
+drwxr-xr-x   4 root root    4096 апр 23  2020 polkit-1
+-rw-rw-r--   1 root root     350 мар 12 17:23 popularity-contest.conf
+drwxr-xr-x   7 root dip     4096 мая 14 21:29 ppp
+lrwxrwxrwx   1 root root      18 мая 14 20:26 printcap -> /run/cups/printcap
+-rw-r--r--   1 root root     581 дек  5  2019 profile
+drwxr-xr-x   2 root root    4096 мая 14 21:11 profile.d
+-rw-r--r--   1 root root    2932 апр  2  2013 protocols
+drwxr-xr-x   3 root root    4096 мая 14 20:30 pulse
+-rw-------   1 root root       0 апр 23  2020 .pwd.lock
+drwxr-xr-x   2 root root    4096 апр 23  2020 python3
+drwxr-xr-x   2 root root    4096 мая 14 21:15 python3.8
+drwxr-xr-x   2 root root    4096 мар 12 17:26 rc0.d
+drwxr-xr-x   2 root root    4096 мар 12 17:26 rc1.d
+drwxr-xr-x   2 root root    4096 мая 11 18:21 rc2.d
+drwxr-xr-x   2 root root    4096 мая 11 18:21 rc3.d
+drwxr-xr-x   2 root root    4096 мая 11 18:21 rc4.d
+drwxr-xr-x   2 root root    4096 мая 11 18:21 rc5.d
+drwxr-xr-x   2 root root    4096 мар 12 17:26 rc6.d
+drwxr-xr-x   2 root root    4096 мар 12 17:26 rcS.d
+lrwxrwxrwx   1 root root      39 мар 12 17:23 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx   1 root root      13 дек 16 06:38 rmt -> /usr/sbin/rmt
+-rw-r--r--   1 root root     887 апр  1  2013 rpc
+-rw-r--r--   1 root root    1382 фев 11  2020 rsyslog.conf
+drwxr-xr-x   2 root root    4096 апр 23  2020 rsyslog.d
+-rw-r--r--   1 root root    5211 мар 11  2020 rygel.conf
+drwxr-xr-x   3 root root    4096 мая 17 12:56 sane.d
+drwxr-xr-x   4 root root    4096 апр 23  2020 security
+drwxr-xr-x   2 root root    4096 апр 23  2020 selinux
+-rw-r--r--   1 root root   10593 ноя  7  2019 sensors3.conf
+drwxr-xr-x   2 root root    4096 апр 23  2020 sensors.d
+-rw-r--r--   1 root root   14464 фев 17  2020 services
+drwxr-xr-x   3 root root    4096 апр 23  2020 sgml
+-rw-r-----   1 root shadow  2102 мая 14 20:42 shadow
+-rw-r-----   1 root shadow  1957 мая 14 20:38 shadow-
+-rw-r--r--   1 root root     116 апр 23  2020 shells
+drwxr-xr-x   2 root root    4096 апр 23  2020 skel
+drwxr-xr-x   2 root root    4096 мая 14 21:06 snmp
+drwxr-xr-x   4 root root    4096 апр 23  2020 speech-dispatcher
+drwxr-xr-x   4 root root    4096 мая 11 18:21 ssh
+drwxr-xr-x   4 root root    4096 мая 17 13:02 ssl
+-rw-r--r--   1 root root     253 мая 14 20:41 subgid
+-rw-r--r--   1 root root     221 мая 14 20:38 subgid-
+-rw-r--r--   1 root root     253 мая 14 20:41 subuid
+-rw-r--r--   1 root root     221 мая 14 20:38 subuid-
+-r--r-----   1 root root     800 мая 14 20:45 sudoers
+drwxr-xr-x   2 root root    4096 мая 14 21:08 sudoers.d
+-rw-r--r--   1 root root    2351 фев 14  2020 sysctl.conf
+drwxr-xr-x   2 root root    4096 апр 23  2020 sysctl.d
+drwxr-xr-x   5 root root    4096 апр 23  2020 systemd
+drwxr-xr-x   2 root root    4096 апр 23  2020 terminfo
+drwxr-xr-x   2 root root    4096 апр 23  2020 thermald
+drwxr-xr-x   2 root root    4096 мая 17 12:52 thunderbird
+-rw-r--r--   1 root root      19 мая 14 20:35 timezone
+drwxr-xr-x   2 root root    4096 апр 22  2020 tmpfiles.d
+drwxr-xr-x   2 root root    4096 апр 23  2020 ubuntu-advantage
+-rw-r--r--   1 root root    1260 дек 14  2018 ucf.conf
+drwxr-xr-x   4 root root    4096 апр 23  2020 udev
+drwxr-xr-x   2 root root    4096 апр 23  2020 udisks2
+drwxr-xr-x   3 root root    4096 апр 23  2020 ufw
+drwxr-xr-x   3 root root    4096 апр 23  2020 update-manager
+drwxr-xr-x   2 root root    4096 мая 17 12:58 update-motd.d
+drwxr-xr-x   2 root root    4096 апр  2  2020 update-notifier
+drwxr-xr-x   2 root root    4096 апр 23  2020 UPower
+-rw-r--r--   1 root root    1523 фев 10  2020 usb_modeswitch.conf
+drwxr-xr-x   2 root root    4096 фев 24  2020 usb_modeswitch.d
+-rw-r--r--   1 root root      10 мар 12 17:35 vconsole.conf
+drwxr-xr-x   2 root root    4096 апр 23  2020 vim
+lrwxrwxrwx   1 root root      23 мар 12 17:20 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x   5 root root    4096 апр 23  2020 vulkan
+-rw-r--r--   1 root root    4942 июл 25  2019 wgetrc
+drwxr-xr-x   2 root root    4096 мая 14 21:26 wpa_supplicant
+drwxr-xr-x  11 root root    4096 апр 23  2020 X11
+-rw-r--r--   1 root root     642 сен 24  2019 xattr.conf
+drwxr-xr-x   6 root root    4096 апр 23  2020 xdg
+drwxr-xr-x   2 root root    4096 апр 23  2020 xml
+-rw-r--r--   1 root root     477 окт  7  2019 zsh_command_not_found
+
+
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ ls /etc -al | cut -b 1-10 | sort | uniq
+drwxr-s---
+drwxr-xr-x
+lrwxrwxrwx
+-r--r-----
+-r--r--r--
+-rw-------
+-rw-r-----
+-rw-r--r--
+-rw-rw-r--
+итого
+
+
+
+
+Задание 3
+
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ sudo nano /etc/ssh/sshd_config
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ systemctl restart sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Чтобы перезапустить «ssh.service», необходимо пройти аутентификацию.
+Authenticating as: Nikolay,,, (nikolay)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ sudo nano /etc/ssh/sshd_config
+nikolay@nikolay-VirtualBox:~/linux_learning/HW4$ systemctl reload sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Чтобы заставить «ssh.service» перечитать конфигурацию, необходимо пройти аутентификацию.
+Authenticating as: Nikolay,,, (nikolay)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+
+
+
+
+Задание 4
+
+nikolay@nikolay-VirtualBox:/$ ps -ef | grep mc
+nikolay   148352  147899  0 14:35 pts/3    00:00:00 mc
+nikolay   151301  148364  0 14:40 pts/5    00:00:00 grep --color=auto mc
+nikolay@nikolay-VirtualBox:/$ kill -9 148352
+nikolay@nikolay-VirtualBox:/$ ps -ef | grep mc
+nikolay   151330  148364  0 14:46 pts/5    00:00:00 grep --color=auto mc
+
+
+
+
